@@ -1,6 +1,6 @@
 version: "3"
 services:
-  steamcmd-ark:
+  ss:
     image: teddysun/go-shadowsocks2
     environment:
       - SERVER_PORT=9000 # 端口
