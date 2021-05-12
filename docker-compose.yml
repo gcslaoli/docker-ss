@@ -1,0 +1,11 @@
+version: "3"
+services:
+  steamcmd-ark:
+    image: teddysun/go-shadowsocks2
+    environment:
+      - SERVER_PORT=9000 # 端口
+      - METHOD=AEAD_CHACHA20_POLY1305 # Encryption method to use, available ciphers: AEAD_AES_128_GCM, AEAD_AES_256_GCM, AEAD_CHACHA20_POLY1305, default AEAD_CHACHA20_POLY1305
+      - PASSWORD=teddysun.com # 密码 默认teddysun.com
+    ports:
+      - 9000:9000 # 宿主机端口:容器端口
+      - 9000:9000/udp # 同时监听UDP，非必须
